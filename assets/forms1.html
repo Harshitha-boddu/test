@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Details</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .form-box,
+        .output-box {
+            width: 45%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input,
+        button {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #e9e9e9;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Form Input and Display</h2>
+    <div class="container">
+        <!-- Left side form -->
+        <div class="form-box">
+            <h3>Enter Details</h3>
+            <input type="text" id="name" placeholder="Enter Name">
+            <input type="text" id="email" placeholder="Enter Email">
+            <input type="text" id="phone" placeholder="Enter Phone">
+            <button onclick="addDetails()">Submit</button>
+        </div>
+
+        <!-- Right side output -->
+        <div class="output-box">
+            <h3>Submitted Details</h3>
+            <ul id="detailsList"></ul>
+        </div>
+    </div>
+
+    <script>
+        function addDetails() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+
+            if (name && email && phone) {
+                var record = document.createElement("div");
+                record.className = "record";
+                record.innerHTML = " Name:" + name + "<br/>" + "E-mail:" + email + "<br/>" + "phone:" + phone;
+                document.getElementById("detailsList").appendChild(record);
+
+                // Clear inputs after submit
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("phone").value = "";
+            } else {
+                alert("Please fill all fields!");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+
+<body>
+    <div class="main-class">
+        <div class="card">
+            <h1 class="head1">Enter Details</h1>
+            <form id="detailsForm" method="get" onsubmit="submitform(event)">
+                <div class="box">
+                    <label>full name</label><br />
+                    <input type="text" id="names" class="text-field" placeholder="enter your name"><br />
+                    <label>phone number</label><br />
+                    <input type="number" id="phones" class="text-field" placeholder="enter your number"><br />
+                    <label>DOB</label><br />
+                    <input type="date" id="date" class="text-field" placeholder="enter your DOB"><br />
+                    <label>E-mail</label><br />
+                    <input type="email" id="e-mails" class="text-field" placeholder="enter your email"><br />
+                    <label>address</label><br />
+                    <input type="textarea" id="addressin" class="text-field" placeholder="enter your address"><br />
+                    <button type="submit" class="btn">submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="card">
+
+            <h1 class="head1">details</h1>
+            <div class="box2">
+                <ul id="detailsList"></ul>
+                <p>frstname:<span id="first"></span></p>
+                <p>phone no:<span id="last"></span></p>
+                <p>dob:<span id="birth"></span></p>
+                <p>e-mail:<span id="mail"></span></p>
+                <p>address:<span id="map"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let username = {};
+
+        let name = document.getElementById("names");
+        let phone = document.getElementById("phones");
+        let DOB = document.getElementById("date");
+        let mails = document.getElementById("e-mails");
+        let addressof = document.getElementById("addressin");
+        function userInput(event) {
+            username[event.target.name] = event.target.value;
+
+        }
+        const submitform = (event) => {
+            event.preventdefault();
+            name.innertext = username.names || "";
+            phone.innertext = username.phones || "";
+            DOB.innertext = username.date || "";
+            mails.innertext = username.e - mails || "";
+            addressof.innertext = username.addressin || "";
+            console.log(username);
+            username.value = "";
+        }
+
+    </script>
+</body>
+
+</html>
