@@ -1,0 +1,49 @@
+.card {
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 3px 4px 25px #000;
+  background-color: #8a802829;
+}
+.main-class {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: auto;
+  background-color: #dc35998a;
+}
+.time {
+  font-size: 110px;
+  text-align: center;
+}
+.header {
+  text-align: center;
+}
+.symbols {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 15px;
+}
+.square {
+  border: 2px solid black;
+  width: 40px;
+  text-align: center;
+  font-size: 25px;
+}
+.refresh {
+  border: 2px solid black;
+  width: 40px;
+  text-align: center;
+  font-size: 26px;
+}
+.square1 {
+  border: 2px solid black;
+  width: 40px;
+  text-align: center;
+  font-size: 25px;
+}

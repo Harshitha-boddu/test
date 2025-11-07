@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light & Cat Switch</title>
+    <link href="./css/cat.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- <h2>Light & Cat Display</h2> -->
+
+    <div class="images">
+        <img id="lightOn" src="./images js/bulb-go-on-img.png" alt="Light On">
+        <img id="lightOff" src="./images js/bulb-go-off-img.png" alt="Light Off">
+        <img id="catFull" src="./images js/cat-img.png" alt="Cat Full">
+        <img id="catEyes" src="./images js/cat-eyes-img.png" alt="Cat Eyes">
+    </div>
+    <h2 onclick="status()" id="switch">Switch On/Off</h2>
+    <div class="button-box">
+        <button id="onBtn" class="on-btn" onclick="switchOn()">ON</button>
+        <button id="offBtn" class="off-btn" onclick="switchOff()">OFF</button>
+    </div>
+
+    <script src="./js/cat.js">
+    </script>
+</body>
+
+</html>
